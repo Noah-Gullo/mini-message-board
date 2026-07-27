@@ -4,6 +4,10 @@
             <p><%= message.user %></p>
             <p>"<%= message.text %>"</p>
             <p>Time Added: <%= message.added %> </p>
+            <form method="POST" action="/messages/<%= message.id %>" >
+                <button>Open Message</button>
+            </form>
         <% }) %>
+        <a href="/new">New Message</a>
     </div>
 </head>
