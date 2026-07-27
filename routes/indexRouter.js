@@ -17,7 +17,11 @@ const messages = [
 indexRouter.get("/", (req, res) => res.render("../views/index.ejs", {messages: messages}));
 indexRouter.get("/new", (req, res) => res.render("../views/form.ejs"))
 indexRouter.post("/new", (req, res) => {
-    
+    messages.push({ 
+        text: req.body.messageInput, 
+        user: req.body.authorInput, 
+        added: new Date() });
+    res.redirect("/");
 });
 
 module.exports = indexRouter;
