@@ -1,3 +1,9 @@
 <head>
-    <h1>Hello, world!</h1>
+    <div>
+        <% messages.map((message) => { %>
+            <p><%= message.user %></p>
+            <p>"<%= message.text %>"</p>
+            <p>Time Added: <%= message.added %> </p>
+        <% }) %>
+    </div>
 </head>
