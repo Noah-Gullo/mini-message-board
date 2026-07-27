@@ -20,7 +20,6 @@ indexRouter.get("/", (req, res) => res.render("../views/index.ejs", {messages: m
 
 indexRouter.post("/messages/:messageID", (req, res) => {
     const targetMessage = messages.filter(msg => msg.id === req.params.messageID)[0];
-    console.log(targetMessage);
     res.render("../views/message.ejs", {message: targetMessage});
 })
 

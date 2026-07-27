@@ -1,7 +1,17 @@
-<head>
-    <h1>Details:</h1>
-    <p>Author: <%= message.user %></p>
-    <p>Message: <%= message.text %></p>
-    <p>Time Added: <%= message.added %> </p>
-    <a href="/">Back to Home</a>
-</head>
+<html>
+    <head>
+        <link rel="stylesheet" href="../styles.css">
+        <title>Message</title>
+    </head>
+
+    <body>
+        <h1>Details:</h1>
+        <div class="messageDetails">
+            <p>Author: <%= message.user %></p>
+            <p>Message: <%= message.text %></p>
+            <p>Time Added: <%= message.added %> </p>
+        </div>
+
+        <a href="/">Back to Home</a>
+    </body>
+</html>

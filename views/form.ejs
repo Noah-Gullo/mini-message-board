@@ -1,9 +1,23 @@
-<form method="POST" action="/new">
-    <h1>Add Message</h1>
-    <label for="authorInput">Author's Name:</label>
-    <input type="text" name="authorInput" placeholder="Author's name here" />
-    <label for="messageInput">Message:</label>
-    <input type="text" name="messageInput" placeholder="Message here" />
-    <button type="submit">Submit</button>
-    <a href="/">Back to Home</a>
-</form>
+<html>
+    <head>
+        <link rel="stylesheet" href="../styles.css">
+        <title>New Message</title>
+    </head>
+    <body>
+        <form method="POST" action="/new">
+            <h1>Add Message</h1>
+            <div id="form">
+                <div>
+                    <label for="authorInput">Author's Name:</label>
+                    <input type="text" name="authorInput" placeholder="Author's name here" min=1 max=30 aria-required="true" required/>
+                </div>
+                <div>
+                    <label for="messageInput">Message:</label>
+                    <input type="text" name="messageInput" placeholder="Message here" min=10 max=250 aria-required="true" required/>
+                </div>
+                <button id="submitBtn" type="submit">Submit</button>
+            </div>
+            <a href="/">Back to Home</a>
+        </form>
+    </body>
+</html>
