@@ -1,4 +1,4 @@
-const { Router } = require("express")
+const { Router } = require("express");
 const indexRouter = Router();
 
 const messages = [
@@ -15,5 +15,9 @@ const messages = [
 ];
 
 indexRouter.get("/", (req, res) => res.render("../views/index.ejs", {messages: messages}));
+indexRouter.get("/new", (req, res) => res.render("../views/form.ejs"))
+indexRouter.post("/new", (req, res) => {
+    
+});
 
 module.exports = indexRouter;
