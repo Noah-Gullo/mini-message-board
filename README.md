@@ -1,6 +1,6 @@
 # Mini Message Board
 ## Link:
-https://mini-message-board-ab8i.onrender.com/
+https://mini-message-board-gray.vercel.app/
 
 ## Description:
 A simple project that allows you to add messages to a dashboard.
