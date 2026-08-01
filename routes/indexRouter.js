@@ -1,8 +1,20 @@
 const { Router } = require("express");
-const db = require("../db/queries");
 const indexRouter = Router();
 
-const messages = db.getAllMessages();
+const messages = [
+    {
+        text: "Hi there!",
+        user: "Amando",
+        added: new Date(),
+        id: crypto.randomUUID(),
+    },
+    {
+        text: "Hello World!",
+        user: "Charles",
+        added: new Date(),
+        id: crypto.randomUUID(),
+    }
+];
 
 indexRouter.get("/", (req, res) => res.render("../views/index.ejs", {messages: messages}));
 
